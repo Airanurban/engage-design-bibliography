@@ -17,22 +17,24 @@ button,input,select{font:inherit} button{cursor:pointer} a{color:#275c4b;text-un
 .glossary{margin:40px 0 0;border:1px solid var(--line);border-radius:11px;background:white}.glossary summary{padding:15px 20px;font-weight:650;cursor:pointer}.glossary-body{padding:0 20px 18px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px 24px}.glossary-body div{font-size:12px;color:#4c6254}.glossary-body b{display:block;color:#28553b}.footer{max-width:1264px;padding:0 22px 40px;margin:auto;color:#718175;font-size:12px}
 @media(max-width:800px){.layout{display:block;padding:18px 16px 60px}.filters{position:static;max-height:none;overflow:visible;margin-bottom:20px;padding:15px}.topic-list{flex-direction:row;flex-wrap:wrap;margin-bottom:13px}.tag-btn{background:#f9fbf7;border-color:#e4ebe2}.section-checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.item{padding:17px}.item h2{font-size:20px}.site-head{padding:25px 18px}.glossary-body{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-.section-checks label {
-  display: grid;
-  grid-template-columns: 20px minmax(0, 1fr);
-  column-gap: 11px;
-  align-items: start;
+/* Align publication type checkboxes */
+.section-checks > label.section-label {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  gap: 11px !important;
   width: 100%;
-  justify-content: initial;
+  text-align: left;
 }
-.section-checks input {
-  width: 17px;
-  height: 17px;
+.section-checks > label.section-label > input {
+  flex: 0 0 17px;
   margin: 3px 0 0;
 }
-.section-checks label span {
+.section-checks > label.section-label > span {
+  display: block;
+  flex: 1 1 0;
   min-width: 0;
-  overflow-wrap: break-word;
+  text-align: left;
 }
 </style>
 </head>
